@@ -18,7 +18,8 @@ The RVM persistent recoverable memory library. The RVM library is used
 by the Coda distributed filesystem.
 
 %description -l pl
-Biblioteka RVM odzyskiwalnej pamiêci. Jest u¿ywana z systemem plików CODA.
+Biblioteka RVM odzyskiwalnej pamiêci. Jest u¿ywana z systemem plików
+CODA.
 
 %package tools
 Summary:	RVM tools
