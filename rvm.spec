@@ -1,12 +1,12 @@
 Summary:	RVM library
 Summary(pl):	Biblioteka RVM
 Name:		rvm
-Version:	1.7
+Version:	1.8
 Release:	1
 License:	GPL
 Group:		Development/Libraries
 Source0:	ftp://ftp.coda.cs.cmu.edu/pub/rvm/src/%{name}-%{version}.tar.gz
-# Source0-md5:	7968fd88667aea6dd89096b9650d7169
+# Source0-md5:	72099f67755326b75ed8120fe28085ba
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
