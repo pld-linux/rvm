@@ -70,9 +70,9 @@ rm -f missing
 touch ChangeLog AUTHORS README
 libtoolize --copy --force
 aclocal
-autoconf
+%{__autoconf}
 autoheader
-automake -a -c -f
+%{__automake}
 %configure
 %{__make} OPTFLAGS="%{rpmcflags}"
 
