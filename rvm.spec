@@ -44,12 +44,13 @@ Requires:	%{name} = %{version}
 Userspace tools to initialize and manipulate RVM log and data
 segments. The RVM library is used by the Coda distributed filesystem.
 
-%description -l pl tools
+%description tools -l pl
 Narzêdzia do inicjalizacji i manipulacji log'ami RVM oraz segmentami
 danych. Biblioteka RVM jest u¿ywana z systemem plików CODA.
 
 %package devel
 Summary:	RVM library development files
+Summary(pl):	Pliki developerskie biblioteki RVM
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(es):	Desarrollo/Bibliotecas
@@ -64,8 +65,13 @@ Requires:	%{name} = %{version}
 Headers and libraries for developing programs using the RVM library.
 The RVM library is used by the Coda distributed filesystem.
 
+%description devel -l pl
+Pliki nag³ówkowe oraz biblioteki do tworzenia programów u¿ywaj±cych
+biblioteki RVM.
+
 %package static
 Summary:	Static RVM libraries
+Summary(pl):	Statyczne biblioteki RVM
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(es):	Desarrollo/Bibliotecas
@@ -79,6 +85,9 @@ Requires:	%{name}-devel = %{version}
 %description static
 Static libraries for developing programs using the RVM library. The
 RVM library is used by the Coda distributed filesystem.
+
+%description static -l pl
+Statyczne biblioteki do tworzenia programów u¿ywaj±cych bibliotek RVM.
 
 %prep
 %setup -q
