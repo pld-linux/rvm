@@ -81,8 +81,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
 
-gzip -9nf NEWS
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -100,7 +98,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc NEWS.gz
+%doc NEWS
 %{_libdir}/lib*.la
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_includedir}/rvm
