@@ -65,7 +65,7 @@ libtoolize
 automake --copy --add-missing
 autoconf
 %configure
-%{__make} OPTFLAGS="$RPM_OPT_FLAGS"
+%{__make} OPTFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
