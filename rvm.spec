@@ -1,22 +1,19 @@
 Summary:	RVM library
 Name:		rvm
-Version:	cvs20001115
+Version:	1.6
 Release:	1
 License:	GPL
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
-Source0:	%{name}-%{version}.tgz
+Source0:	ftp://ftp.coda.cs.cmu.edu/pub/rvm/src/%{name}-%{version}.tar.gz
 BuildRequires:	lwp-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The RVM persistent recoverable memory library. The RVM library is used
 by the Coda distributed filesystem.
-on ftp://ftp.coda.cs.cmu.edu/pub/coda/src/ it not exist..so removed 
-url from source..its cvs version
-
 
 %package tools
 Summary:	RVM tools
@@ -55,7 +52,7 @@ Static libraries for developing programs using the RVM library. The
 RVM library is used by the Coda distributed filesystem.
 
 %prep
-%setup -q -n rvm
+%setup -q
 
 %build
 touch ChangeLog AUTHORS README
@@ -71,6 +68,8 @@ autoconf
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
+
+gzip -9nf NEWS
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -89,7 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc NEWS README INSTALL ChangeLog AUTHORS COPYING
+%doc NEWS.gz
 %attr(755,root,root) %{_libdir}/lib*.la
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_includedir}/rvm
