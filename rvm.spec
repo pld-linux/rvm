@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Development/Libraries
 Source0:	ftp://ftp.coda.cs.cmu.edu/pub/rvm/src/%{name}-%{version}.tar.gz
+# Source0-md5:	7968fd88667aea6dd89096b9650d7169
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
