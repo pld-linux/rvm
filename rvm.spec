@@ -1,4 +1,5 @@
 Summary:	RVM library
+Summary(pl):	Biblioteka RVM
 Name:		rvm
 Version:	1.6
 Release:	1
@@ -10,16 +11,21 @@ Group(pl):	Programowanie/Biblioteki
 Source0:	ftp://ftp.coda.cs.cmu.edu/pub/rvm/src/%{name}-%{version}.tar.gz
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	lwp-devel
 BuildRequires:	libtool
+BuildRequires:	lwp-devel
+BuildRequires:	lwp-static
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The RVM persistent recoverable memory library. The RVM library is used
 by the Coda distributed filesystem.
 
+%description -l pl
+Biblioteka RVM odzyskiwalnej pamiêci. Jest u¿ywana z systemem plików CODA.
+
 %package tools
 Summary:	RVM tools
+Summary(pl):	Narzêdzia RVM
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
@@ -29,6 +35,10 @@ Requires:	%{name} = %{version}
 %description tools
 Userspace tools to initialize and manipulate RVM log and data
 segments. The RVM library is used by the Coda distributed filesystem.
+
+%description -l pl tools
+Narzêdzia do inicjalizacji i manipulacji log'ami RVM oraz segmentami
+danych. Biblioteka RVM jest u¿ywana z systemem plików CODA.
 
 %package devel
 Summary:	RVM library development files
@@ -60,10 +70,10 @@ RVM library is used by the Coda distributed filesystem.
 %build
 rm -f missing
 touch ChangeLog AUTHORS README
-autoheader
-aclocal
 libtoolize --copy --force
+aclocal
 autoconf
+autoheader
 automake -a -c
 %configure
 %{__make} OPTFLAGS="%{rpmcflags}"
