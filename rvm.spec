@@ -7,7 +7,7 @@ Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
-Source0:	%{name}-%{version}.tar.gz
+Source0:	%{name}-%{version}.tgz
 BuildRequires:	lwp-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
