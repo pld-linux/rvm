@@ -55,7 +55,7 @@ Static libraries for developing programs using the RVM library. The
 RVM library is used by the Coda distributed filesystem.
 
 %prep
-%setup -q rvm
+%setup -q -n rvm
 
 %build
 autoheader
