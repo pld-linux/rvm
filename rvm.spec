@@ -58,6 +58,7 @@ RVM library is used by the Coda distributed filesystem.
 %setup -q -n rvm
 
 %build
+touch ChangeLog AUTHORS README
 autoheader
 aclocal
 libtoolize
