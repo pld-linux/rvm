@@ -8,7 +8,10 @@ Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Source0:	ftp://ftp.coda.cs.cmu.edu/pub/rvm/src/%{name}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	lwp-devel
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -55,12 +58,13 @@ RVM library is used by the Coda distributed filesystem.
 %setup -q
 
 %build
+rm -f missing
 touch ChangeLog AUTHORS README
 autoheader
 aclocal
-libtoolize
-automake --copy --add-missing
+libtoolize --copy --force
 autoconf
+automake -a -c
 %configure
 %{__make} OPTFLAGS="%{rpmcflags}"
 
