@@ -69,9 +69,9 @@ Statyczne biblioteki do tworzenia programów u¿ywaj±cych bibliotek RVM.
 rm -f missing
 touch ChangeLog AUTHORS README
 %{__libtoolize}
-aclocal
+%{__aclocal}
 %{__autoconf}
-autoheader
+%{__autoheader}
 %{__automake}
 %configure
 %{__make} OPTFLAGS="%{rpmcflags}"
