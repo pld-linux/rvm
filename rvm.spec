@@ -1,7 +1,7 @@
 Summary:	RVM library
 Summary(pl):	Biblioteka RVM
 Name:		rvm
-Version:	1.6
+Version:	1.7
 Release:	1
 License:	GPL
 Group:		Development/Libraries
