@@ -68,7 +68,7 @@ Statyczne biblioteki do tworzenia programów u¿ywaj±cych bibliotek RVM.
 %build
 rm -f missing
 touch ChangeLog AUTHORS README
-libtoolize --copy --force
+%{__libtoolize}
 aclocal
 %{__autoconf}
 autoheader
