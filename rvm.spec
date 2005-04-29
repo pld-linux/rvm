@@ -26,7 +26,7 @@ CODA.
 Summary:	RVM tools
 Summary(pl):	Narzêdzia RVM
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description tools
 Userspace tools to initialize and manipulate RVM log and data
@@ -40,7 +40,7 @@ danych. Biblioteka RVM jest u¿ywana z systemem plików CODA.
 Summary:	RVM library development files
 Summary(pl):	Pliki developerskie biblioteki RVM
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Headers and libraries for developing programs using the RVM library.
@@ -54,7 +54,7 @@ biblioteki RVM.
 Summary:	Static RVM libraries
 Summary(pl):	Statyczne biblioteki RVM
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libraries for developing programs using the RVM library. The
@@ -75,12 +75,14 @@ touch ChangeLog AUTHORS README
 %{__autoheader}
 %{__automake}
 %configure
-%{__make} OPTFLAGS="%{rpmcflags}"
+%{__make} \
+	OPTFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -90,6 +92,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc NEWS
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files tools
@@ -99,9 +102,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc NEWS
-%{_libdir}/lib*.la
 %attr(755,root,root) %{_libdir}/lib*.so
+%{_libdir}/lib*.la
 %{_includedir}/rvm
 
 %files static
