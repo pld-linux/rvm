@@ -1,5 +1,5 @@
 Summary:	RVM library
-Summary(pl):	Biblioteka RVM
+Summary(pl.UTF-8):   Biblioteka RVM
 Name:		rvm
 Version:	1.13
 Release:	1
@@ -18,13 +18,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 The RVM persistent recoverable memory library. The RVM library is used
 by the Coda distributed filesystem.
 
-%description -l pl
-Biblioteka RVM odzyskiwalnej pami阠i. Jest u縴wana z systemem plik體
+%description -l pl.UTF-8
+Biblioteka RVM odzyskiwalnej pami臋ci. Jest u偶ywana z systemem plik贸w
 CODA.
 
 %package tools
 Summary:	RVM tools
-Summary(pl):	Narz阣zia RVM
+Summary(pl.UTF-8):   Narz臋dzia RVM
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -32,13 +32,13 @@ Requires:	%{name} = %{version}-%{release}
 Userspace tools to initialize and manipulate RVM log and data
 segments. The RVM library is used by the Coda distributed filesystem.
 
-%description tools -l pl
-Narz阣zia do inicjalizacji i manipulacji log'ami RVM oraz segmentami
-danych. Biblioteka RVM jest u縴wana z systemem plik體 CODA.
+%description tools -l pl.UTF-8
+Narz臋dzia do inicjalizacji i manipulacji log'ami RVM oraz segmentami
+danych. Biblioteka RVM jest u偶ywana z systemem plik贸w CODA.
 
 %package devel
 Summary:	RVM library development files
-Summary(pl):	Pliki developerskie biblioteki RVM
+Summary(pl.UTF-8):   Pliki developerskie biblioteki RVM
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -46,13 +46,13 @@ Requires:	%{name} = %{version}-%{release}
 Headers and libraries for developing programs using the RVM library.
 The RVM library is used by the Coda distributed filesystem.
 
-%description devel -l pl
-Pliki nag丑wkowe oraz biblioteki do tworzenia program體 u縴waj眂ych
+%description devel -l pl.UTF-8
+Pliki nag艂贸wkowe oraz biblioteki do tworzenia program贸w u偶ywaj膮cych
 biblioteki RVM.
 
 %package static
 Summary:	Static RVM libraries
-Summary(pl):	Statyczne biblioteki RVM
+Summary(pl.UTF-8):   Statyczne biblioteki RVM
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -60,8 +60,8 @@ Requires:	%{name}-devel = %{version}-%{release}
 Static libraries for developing programs using the RVM library. The
 RVM library is used by the Coda distributed filesystem.
 
-%description static -l pl
-Statyczne biblioteki do tworzenia program體 u縴waj眂ych bibliotek RVM.
+%description static -l pl.UTF-8
+Statyczne biblioteki do tworzenia program贸w u偶ywaj膮cych bibliotek RVM.
 
 %prep
 %setup -q
