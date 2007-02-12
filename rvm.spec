@@ -1,5 +1,5 @@
 Summary:	RVM library
-Summary(pl.UTF-8):   Biblioteka RVM
+Summary(pl.UTF-8):	Biblioteka RVM
 Name:		rvm
 Version:	1.13
 Release:	1
@@ -24,7 +24,7 @@ CODA.
 
 %package tools
 Summary:	RVM tools
-Summary(pl.UTF-8):   Narzędzia RVM
+Summary(pl.UTF-8):	Narzędzia RVM
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -38,7 +38,7 @@ danych. Biblioteka RVM jest używana z systemem plików CODA.
 
 %package devel
 Summary:	RVM library development files
-Summary(pl.UTF-8):   Pliki developerskie biblioteki RVM
+Summary(pl.UTF-8):	Pliki developerskie biblioteki RVM
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -52,7 +52,7 @@ biblioteki RVM.
 
 %package static
 Summary:	Static RVM libraries
-Summary(pl.UTF-8):   Statyczne biblioteki RVM
+Summary(pl.UTF-8):	Statyczne biblioteki RVM
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
