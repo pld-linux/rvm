@@ -1,12 +1,12 @@
 Summary:	RVM library
 Summary(pl.UTF-8):	Biblioteka RVM
 Name:		rvm
-Version:	1.15
+Version:	1.17
 Release:	0.1
 License:	GPL
 Group:		Development/Libraries
 Source0:	ftp://ftp.coda.cs.cmu.edu/pub/rvm/src/%{name}-%{version}.tar.gz
-# Source0-md5:	69b99e80d6af76d86d2157f8f68be19b
+# Source0-md5:	208486ed214c254280a6c23f8f5599bd
 Patch0:		%{name}-configure.patch
 URL:		http://www.cs.cmu.edu/afs/cs/project/coda-www/ResearchWebPages/
 BuildRequires:	autoconf
@@ -108,6 +108,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
 %{_includedir}/rvm
+%{_pkgconfigdir}/rvmlwp.pc
 
 %files static
 %defattr(644,root,root,755)

@@ -1,11 +1,20 @@
---- rvm-1.15/configure.in.orig	2008-01-26 04:08:20.000000000 +0000
-+++ rvm-1.15/configure.in	2008-01-26 04:07:54.000000000 +0000
-@@ -14,7 +14,7 @@
+--- rvm-1.17/configure.in~	2010-03-22 12:00:37.000000000 -0600
++++ rvm-1.17/configure.in	2010-07-17 11:07:43.000000000 -0600
+@@ -15,7 +15,7 @@
  dnl   first to 0
  dnl - if any interfaces were added, increment third
  dnl - if any interfaces were removed, set third to 0
--CODA_LIBRARY_VERSION(2, 3, 2)
+-CODA_LIBRARY_VERSION(4, 3, 2)
 +CODA_LIBRARY_VERSION()
  
  CONFIG_DATE=`date +"%a, %d %b %Y %T %z"`
  AC_SUBST(CONFIG_DATE, "$CONFIG_DATE", [Date when configure was last run])
+@@ -54,7 +54,7 @@
+ dnl Checks for typedefs.
+ 
+ dnl Checks for compiler characteristics.
+-CODA_CC_FEATURE_TEST(Wall)
++CODA_CC_FEATURE_TEST()
+ 
+ dnl Checks for library functions.
+ AC_CHECK_FUNCS(strerror fdatasync)
